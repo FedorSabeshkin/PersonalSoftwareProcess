@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jboss:axis-ws4ee:4.03RC1" type="repository">
+    <properties maven-id="jboss:axis-ws4ee:4.03RC1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/jboss/axis-ws4ee/4.03RC1/axis-ws4ee-4.03RC1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
