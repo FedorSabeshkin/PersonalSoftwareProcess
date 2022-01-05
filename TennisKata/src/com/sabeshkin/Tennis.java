@@ -14,4 +14,12 @@ public class Tennis {
             return false;
         }
     }
+
+    public static boolean isDeuce(int firstScore, int secondScore){
+        if(firstScore==secondScore){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

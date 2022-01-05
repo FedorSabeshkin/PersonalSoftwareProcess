@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c94656d8-8fab-4cbb-bc62-c2ac94483d9f" name="Default Changelist" comment="" />
+    <list default="true" id="c94656d8-8fab-4cbb-bc62-c2ac94483d9f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,23 +26,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="167" />
+          <entry key="java" value="232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="167" />
+          <entry key="JAVA" value="232" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -48,17 +52,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/Tennis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="242">
+              <caret line="17" column="65" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/IsDeuceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="161">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,14 +88,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/sabeshkin/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" />
         <option value="$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sabeshkin/IsDeuceTest.java" />
       </list>
     </option>
   </component>
@@ -95,11 +117,15 @@
     <option name="width" value="1550" />
     <option name="height" value="840" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,7 +162,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,7 +170,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1641309889597" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1641392239515" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -173,13 +198,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.isReachFortyTest.isReachForty_False">
+  <component name="RunManager" selected="JUnit.IsDeuceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.sabeshkin.Tennis" />
       <module name="TennisKata" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsDeuceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisKata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabeshkin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sabeshkin" />
+      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.IsDeuceTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisKata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabeshkin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sabeshkin" />
+      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.IsDeuceTest" />
+      <option name="METHOD_NAME" value="isDeuce_True_Both_Is_More_Thousand" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -218,9 +273,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.isReachFortyTest" />
       <item itemvalue="JUnit.isReachFortyTest.isReachForty_False" />
+      <item itemvalue="JUnit.IsDeuceTest" />
+      <item itemvalue="JUnit.IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IsDeuceTest" />
+        <item itemvalue="JUnit.IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" />
         <item itemvalue="JUnit.isReachFortyTest.isReachForty_False" />
         <item itemvalue="JUnit.isReachFortyTest" />
       </list>
@@ -245,15 +304,45 @@
     <history-entry file="isReachFortyTest - 2022.01.04 at 18h 24m 20s.xml">
       <configuration name="isReachFortyTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 12m 56s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 13m 04s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 13m 39s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 13m 56s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 14m 30s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 14m 32s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 15m 35s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1252000" />
+    <option name="totallyTimeSpent" value="2042000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -262,14 +351,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -292,15 +381,25 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/Tennis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="38" />
+        <state relative-caret-position="242">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="161">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/IsDeuceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

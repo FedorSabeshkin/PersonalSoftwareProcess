@@ -27,7 +27,7 @@ public class isReachFortyTest {
     }
 
     @Test
-    public void isReachForty_True_Both_Is_Thousand() {
+    public void isReachForty_True_Both_Is_More_Thousand() {
         boolean isReachForty = Tennis.isReachForty(1000,1001);
         assertEquals(
                 true,isReachForty);
