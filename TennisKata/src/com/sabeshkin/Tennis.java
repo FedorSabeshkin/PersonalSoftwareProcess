@@ -17,11 +17,12 @@ public class Tennis {
 
     public static void main(String[] args) {
         Tennis tennis = new Tennis();
-        tennis.printScoreResult(3,5);
+        tennis.printScoreResult(3, 5);
     }
 
     /**
      * select Score Result in tennis system
+     *
      * @param firstScore
      * @param secondScore
      * @return formated score result string
@@ -30,22 +31,52 @@ public class Tennis {
 
         boolean isReachForty = isReachForty(firstScore, secondScore);
         if (isReachForty) {
-            boolean isWin = isWin(firstScore, secondScore);
-            if (isWin) {
-                return selectWinnerPlayerName(firstScore, secondScore);
-            } else {
-                boolean isDeuce = isDeuce(firstScore, secondScore);
-                if(isDeuce){
-                    return selectDeuce();
-                }else{
-                    boolean isMoreForty = isMoreForty(firstScore, secondScore);
-                    if(isMoreForty){
-                        return selectLeadingPlayerName(firstScore, secondScore);
-                    }else{
-                        return selectTennisScores(firstScore, secondScore);
-                    }
-                }
-            }
+            return defineWinner(firstScore, secondScore);
+        } else {
+            return selectTennisScores(firstScore, secondScore);
+        }
+    }
+
+    /**
+     * Define and return winner or check deuce case
+     * @param firstScore
+     * @param secondScore
+     * @return
+     */
+    public String defineWinner(int firstScore, int secondScore) {
+        boolean isWin = isWin(firstScore, secondScore);
+        if (isWin) {
+            return selectWinnerPlayerName(firstScore, secondScore);
+        } else {
+            return defineDeuce(firstScore, secondScore);
+        }
+    }
+
+    /**
+     * Define and return deuce or return advantaging player
+     * @param firstScore
+     * @param secondScore
+     * @return
+     */
+    public String defineDeuce(int firstScore, int secondScore) {
+        boolean isDeuce = isDeuce(firstScore, secondScore);
+        if (isDeuce) {
+            return selectDeuce();
+        } else {
+            return defineAdvantage(firstScore, secondScore);
+        }
+    }
+
+    /**
+     * define and return advantaging player or return scores both players in tennis system
+     * @param firstScore
+     * @param secondScore
+     * @return
+     */
+    public String defineAdvantage(int firstScore, int secondScore) {
+        boolean isMoreForty = isMoreForty(firstScore, secondScore);
+        if (isMoreForty) {
+            return selectLeadingPlayerName(firstScore, secondScore);
         } else {
             return selectTennisScores(firstScore, secondScore);
         }
@@ -54,6 +85,7 @@ public class Tennis {
 
     /**
      * Print game scores in tennis system to terminal.
+     *
      * @param firstScore
      * @param secondScore
      */
@@ -64,6 +96,7 @@ public class Tennis {
 
     /**
      * Select "name" leading player
+     *
      * @param firstScore
      * @param secondScore
      * @return name of leading player
@@ -78,7 +111,6 @@ public class Tennis {
 
 
     /**
-     *
      * @param score
      * @return score in tennis system
      */
@@ -88,6 +120,7 @@ public class Tennis {
 
     /**
      * somebady win or not
+     *
      * @param firstScore
      * @param secondScore
      * @return
@@ -104,6 +137,7 @@ public class Tennis {
 
     /**
      * Check what somebady already have 40 scores
+     *
      * @param firstScore
      * @param secondScore
      * @return
@@ -118,6 +152,7 @@ public class Tennis {
 
     /**
      * Check what somebady already have <b>more</b> than 40 scores
+     *
      * @param firstScore
      * @param secondScore
      * @return
@@ -132,6 +167,7 @@ public class Tennis {
 
     /**
      * Check deuce case. We should check isReachForty early.
+     *
      * @param firstScore
      * @param secondScore
      * @return
@@ -146,12 +182,12 @@ public class Tennis {
 
     /**
      * Aliase for println function. Print line to terminal.
+     *
      * @param message
      */
     public static void println(String message) {
         System.out.println(message);
     }
-
 
 
     public String selectWinnerPlayerName(int firstScore, int secondScore) {
@@ -164,11 +200,18 @@ public class Tennis {
         return "Deuce";
     }
 
+
     public String selectLeadingPlayerName(int firstScore, int secondScore) {
         String leadingName = selectLeadingName(firstScore, secondScore);
         return leadingName + " player has an advantage.";
     }
 
+    /**
+     * Return scores both players in tennis system
+     * @param firstScore
+     * @param secondScore
+     * @return
+     */
     public String selectTennisScores(int firstScore, int secondScore) {
         String tennisScore = selectTennisScores(firstScore);
         String scoreResult = "First player: " + tennisScore + "\n";
