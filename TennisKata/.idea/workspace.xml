@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c94656d8-8fab-4cbb-bc62-c2ac94483d9f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,43 +24,71 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="232" />
+          <entry key="java" value="739" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="232" />
+          <entry key="JAVA" value="739" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="java" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/Tennis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="17" column="65" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="65" />
+            <state relative-caret-position="198">
+              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+              <folding>
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#1393#1394#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/IsWinTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/SelectLeadingNameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/IsDeuceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="132">
+              <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="638">
               <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,9 +125,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/sabeshkin/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" />
         <option value="$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java" />
         <option value="$PROJECT_DIR$/src/com/sabeshkin/IsDeuceTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sabeshkin/SelectLeadingNameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sabeshkin/IsWinTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sabeshkin/Tennis.java" />
       </list>
     </option>
   </component>
@@ -170,7 +198,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1641392239515" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1641394535697" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -198,17 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IsDeuceTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.Tennis" />
-      <module name="TennisKata" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.IsWinTest">
     <configuration name="IsDeuceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TennisKata" />
       <extension name="coverage">
@@ -223,7 +241,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IsWinTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TennisKata" />
       <extension name="coverage">
         <pattern>
@@ -232,14 +250,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sabeshkin" />
-      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.IsDeuceTest" />
-      <option name="METHOD_NAME" value="isDeuce_True_Both_Is_More_Thousand" />
+      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.IsWinTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsWinTest.isWinTest_Without_Deuce_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisKata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sabeshkin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sabeshkin" />
+      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.IsWinTest" />
+      <option name="METHOD_NAME" value="isWinTest_Without_Deuce_True" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="isReachFortyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectLeadingNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TennisKata" />
       <extension name="coverage">
         <pattern>
@@ -248,12 +280,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sabeshkin" />
-      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.isReachFortyTest" />
+      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.SelectLeadingNameTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="isReachFortyTest.isReachForty_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectLeadingNameTest.selectLeadingNameTest_Equals_Score" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TennisKata" />
       <extension name="coverage">
         <pattern>
@@ -262,26 +294,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sabeshkin" />
-      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.isReachFortyTest" />
-      <option name="METHOD_NAME" value="isReachForty_False" />
+      <option name="MAIN_CLASS_NAME" value="com.sabeshkin.SelectLeadingNameTest" />
+      <option name="METHOD_NAME" value="selectLeadingNameTest_Equals_Score" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.isReachFortyTest" />
-      <item itemvalue="JUnit.isReachFortyTest.isReachForty_False" />
       <item itemvalue="JUnit.IsDeuceTest" />
-      <item itemvalue="JUnit.IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" />
+      <item itemvalue="JUnit.SelectLeadingNameTest" />
+      <item itemvalue="JUnit.SelectLeadingNameTest.selectLeadingNameTest_Equals_Score" />
+      <item itemvalue="JUnit.IsWinTest" />
+      <item itemvalue="JUnit.IsWinTest.isWinTest_Without_Deuce_True" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IsWinTest" />
+        <item itemvalue="JUnit.IsWinTest.isWinTest_Without_Deuce_True" />
+        <item itemvalue="JUnit.SelectLeadingNameTest.selectLeadingNameTest_Equals_Score" />
+        <item itemvalue="JUnit.SelectLeadingNameTest" />
         <item itemvalue="JUnit.IsDeuceTest" />
-        <item itemvalue="JUnit.IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" />
-        <item itemvalue="JUnit.isReachFortyTest.isReachForty_False" />
-        <item itemvalue="JUnit.isReachFortyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,33 +334,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="isReachFortyTest - 2022.01.04 at 18h 24m 20s.xml">
-      <configuration name="isReachFortyTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 12m 56s.xml">
-      <configuration name="IsDeuceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 13m 04s.xml">
-      <configuration name="IsDeuceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 13m 39s.xml">
-      <configuration name="IsDeuceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 13m 56s.xml">
-      <configuration name="IsDeuceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 14m 30s.xml">
-      <configuration name="IsDeuceTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="IsDeuceTest - 2022.01.05 at 17h 14m 32s.xml">
       <configuration name="IsDeuceTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="IsDeuceTest - 2022.01.05 at 17h 15m 35s.xml">
       <configuration name="IsDeuceTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IsDeuceTest_isDeuce_True_Both_Is_More_Thousand - 2022.01.05 at 17h 15m 46s.xml">
+      <configuration name="IsDeuceTest.isDeuce_True_Both_Is_More_Thousand" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsDeuceTest - 2022.01.05 at 17h 15m 50s.xml">
+      <configuration name="IsDeuceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SelectLeadingNameTest - 2022.01.05 at 17h 33m 15s.xml">
+      <configuration name="SelectLeadingNameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SelectLeadingNameTest_selectLeadingNameTest_Equals_Score - 2022.01.05 at 17h 37m 19s.xml">
+      <configuration name="SelectLeadingNameTest.selectLeadingNameTest_Equals_Score" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsWinTest - 2022.01.05 at 17h 53m 53s.xml">
+      <configuration name="IsWinTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsWinTest_isWinTest_Without_Deuce_True - 2022.01.05 at 17h 55m 11s.xml">
+      <configuration name="IsWinTest.isWinTest_Without_Deuce_True" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsWinTest - 2022.01.05 at 17h 55m 16s.xml">
+      <configuration name="IsWinTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IsWinTest - 2022.01.05 at 17h 55m 33s.xml">
+      <configuration name="IsWinTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2042000" />
+    <option name="totallyTimeSpent" value="4981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -351,7 +390,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49078014" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -379,16 +418,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/Tennis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/isReachFortyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="638">
           <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -398,10 +430,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/IsDeuceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/SelectLeadingNameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/IsWinTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sabeshkin/Tennis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
           </folding>
         </state>
       </provider>
