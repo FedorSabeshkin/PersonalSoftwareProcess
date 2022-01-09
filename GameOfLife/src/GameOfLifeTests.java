@@ -1,7 +1,26 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
+import org.junit.*;
 
 public class GameOfLifeTests {
+
+    char[][] chars = {
+            {'.', '.', '.', '.', '.'},
+            {'.', '.', '*', '.', '.'},
+            {'.', '*', '*', '.', '.'},
+            {'.', '.', '.', '.', '.'}
+    };
+    Cell[][] prevGenerationGrid = GameOfLife.charGridToCellGrid(chars);
+
+    @Test
+    public void generationalChange_True() {
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid);
+        Cell liveCell = nextGenerationGrid[1][1];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true,live);
+    }
 
     @Test
     public void isDeadNextGeneration_False() {
@@ -80,5 +99,7 @@ public class GameOfLifeTests {
         assertEquals(
                 true, isSameNextGeneration);
     }
+
+
 
 }

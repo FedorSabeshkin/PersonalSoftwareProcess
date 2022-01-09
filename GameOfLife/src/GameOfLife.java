@@ -90,6 +90,7 @@ public class GameOfLife {
     //Новое поколение сетки
     public static Cell[][] generationalChange(Cell[][] prevGenerationGrid) {
         Cell[][] grid = prevGenerationGrid.clone();
+        grid = calculateLiveNeighboursForAll(grid);
         Cell[][] nextGenerationGrid = new Cell[columnAmount][rowAmount];
         for (int i = 0; i < grid.length; i++) {
             for (int k = 0; k < grid[i].length; k++) {
@@ -112,7 +113,7 @@ public class GameOfLife {
     }
 
     //Подсчет кол-ва соседей для всех точек
-    public static Cell[][] acrossGrid(Cell[][] gridForCount) {
+    public static Cell[][] calculateLiveNeighboursForAll(Cell[][] gridForCount) {
         Cell[][] grid = gridForCount.clone();
         for (int i = 0; i < grid.length; i++) {
             for (int k = 0; k < grid[i].length; k++) {
