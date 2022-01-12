@@ -57,7 +57,7 @@ public class GameOfLifeTests {
 
 
     @Test
-    public void generationalChange_For_2_1_Will_Live() {
+    public void generationalChange_For_2_1_Will_Dead() {
         char[][] chars_second = {
                 {'.', '.', '.', '.', '.'},
                 {'.', '.', '.', '.', '.'},
@@ -70,11 +70,11 @@ public class GameOfLifeTests {
         Cell liveCell = nextGenerationGrid[2][1];
         boolean live = liveCell.getIsLive();
         assertEquals(
-                true, live);
+                false, live);
     }
 
     @Test
-    public void generationalChange_For_3_2_Will_Live() {
+    public void generationalChange_For_3_2_Will_Dead() {
         char[][] chars_third = {
                 {'.', '.', '.', '.', '.'},
                 {'.', '.', '*', '.', '.'},
@@ -87,7 +87,7 @@ public class GameOfLifeTests {
         Cell liveCell = nextGenerationGrid[3][2];
         boolean live = liveCell.getIsLive();
         assertEquals(
-                true, live);
+                false, live);
     }
 
 
