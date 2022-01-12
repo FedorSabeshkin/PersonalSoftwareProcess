@@ -105,7 +105,11 @@ public class GameOfLife {
                         nextGenerationGrid[i][k] = Cell.createLive(column, row);
                     }
                 } else {
-                    nextGenerationGrid[i][k] = Cell.createSame(cell);
+                    if(isLiveNextGeneration(cell)){
+                        nextGenerationGrid[i][k] = Cell.createLive(column, row);
+                    }else{
+                        nextGenerationGrid[i][k] = Cell.createSame(cell);
+                    }
                 }
             }
         }
@@ -128,7 +132,7 @@ public class GameOfLife {
     }
 
 
-    //будет ли жива в следующем поколении
+    //будет ли "Мертва" в следующем поколении
     public static boolean isDeadNextGeneration(Cell cell) {
         int liveNeighbours = cell.getLiveNeighbours();
         if (liveNeighbours > 3 || liveNeighbours < 2) {
@@ -137,7 +141,16 @@ public class GameOfLife {
             return false;
         }
     }
-
+   //будет ли "Жива" в следующем поколении
+    public static boolean isLiveNextGeneration(Cell cell) {
+        int liveNeighbours = cell.getLiveNeighbours();
+        if (liveNeighbours == 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // Здесь ошибка
     // оставляем в том же состоянии, в котором была
     public static boolean isSameNextGeneration(Cell cell) {
         int liveNeighbours = cell.getLiveNeighbours();
