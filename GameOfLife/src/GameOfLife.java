@@ -119,29 +119,46 @@ public class GameOfLife {
     public static Cell[][] generationalChange(Cell[][] prevGenerationGrid) {
         Cell[][] grid = prevGenerationGrid.clone();
         grid = calculateLiveNeighboursForAll(grid);
+
         Cell[][] nextGenerationGrid = new Cell[columnAmount][rowAmount];
+        // цикл по всем точкам сетки
         for (int i = 0; i < grid.length; i++) {
             for (int k = 0; k < grid[i].length; k++) {
-                // цикл по всем точкам сетки
+
                 Cell cell = grid[i][k];
                 int column = cell.getColumn();
                 int row = cell.getRow();
-                if (!isSameNextGeneration(cell)) {
-                    if (isDeadNextGeneration(cell)) {
-                        nextGenerationGrid[i][k] = Cell.createDead(column, row);
-                    } else {
-                        nextGenerationGrid[i][k] = Cell.createLive(column, row);
-                    }
-                } else {
-                    if (isLiveNextGeneration(cell)) {
-                        nextGenerationGrid[i][k] = Cell.createLive(column, row);
-                    } else {
-                        nextGenerationGrid[i][k] = Cell.createSame(cell);
-                    }
-                }
+                nextGenerationGrid[i][k] = createNextGenerationCell(cell, column, row);
             }
         }
+
         return nextGenerationGrid;
+    }
+
+    public static Cell createNextGenerationCell(Cell cell, int column, int row) {
+        if (!isSameNextGeneration(cell)) {
+            return defineAnotherCell(cell, column, row);
+        } else {
+            return defineSameCell(cell, column, row);
+        }
+    }
+
+    public static Cell defineAnotherCell(Cell cell, int column, int row) {
+        if (isDeadNextGeneration(cell)) {
+            return Cell.createDead(column, row);
+        } else {
+            return Cell.createLive(column, row);
+        }
+
+    }
+
+    public static Cell defineSameCell(Cell cell, int column, int row) {
+        if (isLiveNextGeneration(cell)) {
+            return Cell.createLive(column, row);
+        } else {
+            return Cell.createSame(cell);
+        }
+
     }
 
     /**
@@ -164,6 +181,29 @@ public class GameOfLife {
         return grid;
     }
 
+    /**
+     * Подсчет живых кол-ва соседей для конкретной точки
+     *
+     * @param cell клетка
+     * @param grid сетка в которой она находится
+     * @return кол-во живых соседей для точки
+     */
+    public static int calculateLiveNeighbours(Cell cell, Cell[][] grid) {
+        int[][] neighborPoints = generateNeighbourPoints(cell);
+        int liveNeighbours = 0;
+        //цикл по точкам соседей
+        for (int i = 0; i < neighborPoints.length; i++) {
+            int neighborColumn = neighborPoints[i][0];
+            int neighborRow = neighborPoints[i][1];
+            if (isValidPoints(neighborColumn, neighborRow)) {
+                Cell neighbor = grid[neighborColumn][neighborRow];
+                if (isLiveNeighbour(neighbor)) {
+                    liveNeighbours++;
+                }
+            }
+        }
+        return liveNeighbours;
+    }
 
     /**
      * Будет ли клетка "Мертва" в следующем поколении
@@ -210,29 +250,6 @@ public class GameOfLife {
         }
     }
 
-    /**
-     * Подсчет живых кол-ва соседей для конкретной точки
-     *
-     * @param cell клетка
-     * @param grid сетка в которой она находится
-     * @return кол-во живых соседей для точки
-     */
-    public static int calculateLiveNeighbours(Cell cell, Cell[][] grid) {
-        int[][] neigbourPoints = generateNeighbourPoints(cell);
-        int liveNeighbours = 0;
-        //цикл по точкам соседей
-        for (int i = 0; i < neigbourPoints.length; i++) {
-            int neigbourColumn = neigbourPoints[i][0];
-            int neigbourRow = neigbourPoints[i][1];
-            if (isValidPoints(neigbourColumn, neigbourRow)) {
-                Cell neigbour = grid[neigbourColumn][neigbourRow];
-                if (isLiveNeighbour(neigbour)) {
-                    liveNeighbours++;
-                }
-            }
-        }
-        return liveNeighbours;
-    }
 
     /**
      * Generate Neighbour Points
@@ -243,26 +260,26 @@ public class GameOfLife {
     public static int[][] generateNeighbourPoints(@NotNull Cell cell) {
         int row = cell.getRow();
         int column = cell.getColumn();
-        // 8 - count neigbours of point for two dimensional grid
-        int[][] neigbours = new int[8][2];
+        // 8 - count neighbors of point for two dimensional grid
+        int[][] neighbors = new int[8][2];
 
         //upper line
-        neigbours[0] = new int[]{column - 1, row - 1};
-        neigbours[1] = new int[]{column, row - 1};
-        neigbours[2] = new int[]{column + 1, row - 1};
+        neighbors[0] = new int[]{column - 1, row - 1};
+        neighbors[1] = new int[]{column, row - 1};
+        neighbors[2] = new int[]{column + 1, row - 1};
 
         //right column
-        neigbours[3] = new int[]{column + 1, row};
-        neigbours[4] = new int[]{column + 1, row + 1};
+        neighbors[3] = new int[]{column + 1, row};
+        neighbors[4] = new int[]{column + 1, row + 1};
 
         // bottom line
-        neigbours[5] = new int[]{column, row + 1};
-        neigbours[6] = new int[]{column - 1, row + 1};
+        neighbors[5] = new int[]{column, row + 1};
+        neighbors[6] = new int[]{column - 1, row + 1};
 
         //left line
-        neigbours[7] = new int[]{column - 1, row};
+        neighbors[7] = new int[]{column - 1, row};
 
-        return neigbours;
+        return neighbors;
     }
 
 
