@@ -13,9 +13,6 @@ public class GameOfLifeTests {
     };
     Cell[][] prevGenerationGrid = GameOfLife.charGridToCellGrid(chars);
 
-    public void setup() {
-        prevGenerationGrid = GameOfLife.charGridToCellGrid(chars);
-    }
 
 
 
@@ -58,15 +55,127 @@ public class GameOfLifeTests {
                 3, liveNeighbours);
     }
 
-//    @Test
-//    public void generationalChange_True() {
-//
-//        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid);
-//        Cell liveCell = nextGenerationGrid[1][1];
-//        boolean live = liveCell.getIsLive();
-//        assertEquals(
-//                true, live);
-//    }
+
+    @Test
+    public void generationalChange_For_2_1_Will_Live() {
+        char[][] chars_second = {
+                {'.', '.', '.', '.', '.'},
+                {'.', '.', '.', '.', '.'},
+                {'.', '*', '*', '*', '.'},
+                {'.', '.', '.', '.', '.'}
+        };
+        Cell[][] prevGenerationGrid_second = GameOfLife.charGridToCellGrid(chars_second);
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid_second);
+        Cell liveCell = nextGenerationGrid[2][1];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+    @Test
+    public void generationalChange_For_3_2_Will_Live() {
+        char[][] chars_third = {
+                {'.', '.', '.', '.', '.'},
+                {'.', '.', '*', '.', '.'},
+                {'.', '.', '*', '.', '.'},
+                {'.', '.', '*', '.', '.'}
+        };
+        Cell[][] prevGenerationGrid_third = GameOfLife.charGridToCellGrid(chars_third);
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid_third);
+        Cell liveCell = nextGenerationGrid[3][2];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+
+
+    @Test
+    public void generationalChange_For_Edge_Of_Grid_1_4_Will_Live() {
+        char[][] chars_fourth = {
+                {'.', '.', '.', '.', '*'},
+                {'.', '.', '.', '.', '*'},
+                {'.', '.', '.', '.', '*'},
+                {'.', '.', '.', '.', '.'}
+        };
+        Cell[][] prevGenerationGrid_fourth = GameOfLife.charGridToCellGrid(chars_fourth);
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid_fourth);
+        Cell liveCell = nextGenerationGrid[1][4];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+    @Test
+    public void generationalChange_For_Edge_Of_Grid_2_1_Will_Live() {
+        char[][] chars_fifth = {
+                {'.', '.', '.', '.', '*'},
+                {'*', '.', '.', '.', '.'},
+                {'.', '.', '.', '.', '*'},
+                {'*', '*', '.', '.', '.'}
+        };
+        Cell[][] prevGenerationGrid_fifth = GameOfLife.charGridToCellGrid(chars_fifth);
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid_fifth);
+        Cell liveCell = nextGenerationGrid[2][1];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+    @Test
+    public void generationalChange_For_Edge_Of_Grid_2_2_Will_Live() {
+        char[][] chars_fifth = {
+                {'*', '*', '*', '*', '*'},
+                {'*', '.', '.', '.', '*'},
+                {'*', '.', '.', '.', '*'},
+                {'*', '*', '*', '*', '*'}
+        };
+        Cell[][] prevGenerationGrid_fifth = GameOfLife.charGridToCellGrid(chars_fifth);
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid_fifth);
+        Cell liveCell = nextGenerationGrid[2][2];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+    @Test
+    public void generationalChange_For_Edge_Of_Grid_Only_Uncles_Will_Live() {
+        char[][] chars_fifth = {
+                {'*', '*', '*', '*', '*'},
+                {'*', '*', '*', '*', '*'},
+                {'*', '*', '*', '*', '*'},
+                {'*', '*', '*', '*', '*'}
+        };
+        Cell[][] prevGenerationGrid_fifth = GameOfLife.charGridToCellGrid(chars_fifth);
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid_fifth);
+        Cell cellLeftBottom = nextGenerationGrid[3][0];
+        Cell cellLeftUp = nextGenerationGrid[0][0];
+        Cell cellRightUp = nextGenerationGrid[0][4];
+        Cell cellRightBottom = nextGenerationGrid[3][4];
+
+        cellLeftBottom.getIsLive();
+        boolean live = cellLeftBottom.getIsLive() && cellLeftUp.getIsLive() && cellRightUp.getIsLive() && cellRightBottom.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+    @Test
+    public void generationalChange_True() {
+
+        Cell[][] nextGenerationGrid = GameOfLife.generationalChange(prevGenerationGrid);
+        Cell liveCell = nextGenerationGrid[1][1];
+        boolean live = liveCell.getIsLive();
+        assertEquals(
+                true, live);
+    }
+
+
 
     @Test
     public void isDeadNextGeneration_False() {

@@ -30,6 +30,7 @@ public class GameOfLife {
         printTwoDimensionalArray(chars);
     }
 
+
     // печать двумерного массива
     public static void printTwoDimensionalArray(char[][] chars) {
         for (int i = 0; i < chars.length; i++) {
@@ -105,9 +106,9 @@ public class GameOfLife {
                         nextGenerationGrid[i][k] = Cell.createLive(column, row);
                     }
                 } else {
-                    if(isLiveNextGeneration(cell)){
+                    if (isLiveNextGeneration(cell)) {
                         nextGenerationGrid[i][k] = Cell.createLive(column, row);
-                    }else{
+                    } else {
                         nextGenerationGrid[i][k] = Cell.createSame(cell);
                     }
                 }
@@ -141,7 +142,8 @@ public class GameOfLife {
             return false;
         }
     }
-   //будет ли "Жива" в следующем поколении
+
+    //будет ли "Жива" в следующем поколении
     public static boolean isLiveNextGeneration(Cell cell) {
         int liveNeighbours = cell.getLiveNeighbours();
         if (liveNeighbours == 3) {
@@ -150,6 +152,7 @@ public class GameOfLife {
             return false;
         }
     }
+
     // Здесь ошибка
     // оставляем в том же состоянии, в котором была
     public static boolean isSameNextGeneration(Cell cell) {
