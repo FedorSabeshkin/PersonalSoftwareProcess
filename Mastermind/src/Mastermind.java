@@ -1,9 +1,13 @@
 import java.util.*;
 import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class Mastermind {
 
 
     private String[] paternColors;
+
+
 
     public Mastermind startGame(String[] paternColors){
         return new Mastermind(paternColors);
@@ -15,6 +19,18 @@ public class Mastermind {
 
     public static void main(String args[]) {
         System.out.println();
+    }
+
+    /**
+     * Подсчитывает кол-во цветов, содержащихся в обоих последовательностях
+     * независимо от их расположения
+     * @param patternColors
+     * @param inColors
+     * @return
+     */
+    public static int countSameColors(String[] patternColors, String[] inColors) {
+        Stream<String> colorsInBothArrs = Arrays.stream(inColors).filter(color->checkColorExist(color, patternColors) );
+        return (int) colorsInBothArrs.count();
     }
 
     // проверяем, что цвет содержится в массиве

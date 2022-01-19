@@ -43,4 +43,36 @@ public class MastermindTests {
                 new String[] {"red","blue","orange"},
                 new String[] {"red","blue","orange"}));
     }
+
+    @Test
+    public void countSameColors_1() {
+        assertEquals(1,
+                Mastermind.countSameColors(
+                        new String[] {"red","blue","orange"},
+                        new String[] {"blue","yellow","black"}));
+    }
+
+    @Test
+    public void countSameColors_3() {
+        assertEquals(3,
+                Mastermind.countSameColors(
+                        new String[] {"red","blue","orange"},
+                        new String[] {"orange","blue","red"}));
+    }
+
+    @Test
+    public void countSameColors__In_Same_Positions_3() {
+        assertEquals(3,
+                Mastermind.countSameColors(
+                        new String[] {"red","blue","orange"},
+                        new String[] {"red","blue","orange"}));
+    }
+
+    @Test
+    public void countSameColors_0() {
+        assertEquals(0,
+                Mastermind.countSameColors(
+                        new String[] {"red","blue","orange"},
+                        new String[] {"green","yellow","black"}));
+    }
 }
