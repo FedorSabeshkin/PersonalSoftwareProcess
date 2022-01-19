@@ -4,11 +4,11 @@ public class Cell{
 
 
 
-    private Integer column = null;
+    private Integer column;
 
 
 
-    private Integer row = null;
+    private Integer row;
     private boolean isLive;
 
     private Cell(int column, int row, boolean isLive){
@@ -21,7 +21,7 @@ public class Cell{
     public static Cell createLive(int column, int row){
         Cell liveCell = new Cell(column,row, true);
         return liveCell;
-    };
+    }
 
 
     public static Cell createDead(int column, int row){
@@ -36,10 +36,6 @@ public class Cell{
         Cell sameCell = new Cell(column,row, isLive);
         return sameCell;
     };
-
-    public void iterateLiveNeigbours(){
-        this.liveNeighbours++;
-    }
 
     public int getLiveNeighbours() {
         return liveNeighbours;
