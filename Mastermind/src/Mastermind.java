@@ -9,6 +9,7 @@ public class Mastermind {
 
 
 
+
     public Mastermind startGame(String[] paternColors){
         return new Mastermind(paternColors);
     }
@@ -19,6 +20,30 @@ public class Mastermind {
 
     public static void main(String args[]) {
         System.out.println();
+    }
+
+    /**
+     *  Count colors non same positions
+     * @param patternColors
+     * @param inColors
+     * @return
+     */
+    public static int countNonSamePositionsColors(String[] patternColors, String[] inColors) {
+        int amountSameColor = countSameColors(patternColors, inColors);
+        int amountColorInSamePosition = countSamePositionColors(patternColors, inColors);
+        return amountSameColor-amountColorInSamePosition;
+    }
+
+    /**
+     * Return answer after one game move
+     * @param patternColors
+     * @param inColors
+     * @return
+     */
+    public static int[] gameMove(String[] patternColors, String[] inColors) {
+        int amountColorInSamePosition = countSamePositionColors(patternColors, inColors);
+        int amountNonSamePositionsColors = countNonSamePositionsColors(patternColors, inColors);
+        return new int[] {amountColorInSamePosition, amountNonSamePositionsColors};
     }
 
     /**
