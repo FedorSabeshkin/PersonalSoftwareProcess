@@ -1,3 +1,4 @@
+package com.sabeshkin;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -18,9 +19,9 @@ public class FourOfKindTest {
     }
 
     @Test
-    public void Count_FourOfKind_16() {
+    public void Count_FourOfKind_32() {
         assertEquals(
-                16,
+                32,
                 YahtzeeCounter.count("fourOfKind", new int[]{4,4,4,4,4}));
     }
 }

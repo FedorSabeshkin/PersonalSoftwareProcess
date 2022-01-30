@@ -1,5 +1,7 @@
-
+package com.sabeshkin;
 import static org.junit.Assert.*;
+
+import com.sabeshkin.YahtzeeCounter;
 import org.junit.Test;
 
 public class YahtzeeCounterTest {
@@ -40,18 +42,20 @@ public class YahtzeeCounterTest {
     }
 
     @Test
+    public void Count_Fours_16() {
+        assertEquals(
+                16,
+                YahtzeeCounter.count("fours", new int[]{4,2,4,4,4}));
+    }
+
+    @Test
     public void Count_Fives_0() {
         assertEquals(
                 0,
                 YahtzeeCounter.count("fives", new int[]{3,2,3,2,3}));
     }
 
-    @Test
-    public void Count_Fours_16() {
-        assertEquals(
-                16,
-                YahtzeeCounter.count("fours", new int[]{4,2,4,4,4}));
-    }
+
 
     @Test
     public void Count_Fives_5() {
@@ -83,11 +87,6 @@ public class YahtzeeCounterTest {
 
 
 
-    @Test
-    public void Count_Chance_5() {
-        assertEquals(
-                5,
-                YahtzeeCounter.count("chance", new int[]{1,1,1,1,1}));
-    }
+
 
 }
