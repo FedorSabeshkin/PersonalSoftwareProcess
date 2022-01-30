@@ -26,8 +26,25 @@ public class YahtzeeCounter {
             case "yahtzee": {
                 return yahtzee(dices);
             }
+            case "chance": {
+                return chance(dices);
+            }
         }
+        /**
+         *
+         * TODO: попробовать убрать это return,
+         * и сузить входное название до enum, что бы точно попадало в один из switch
+        */
         return 0;
+    }
+
+    /**
+     * Count "chance"
+     * @param dices
+     * @return scores for "chance"
+     */
+    public static int chance(int[] dices) {
+        return sumOfDices(dices);
     }
 
     /**
