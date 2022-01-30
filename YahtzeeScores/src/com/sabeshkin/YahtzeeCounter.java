@@ -19,8 +19,39 @@ public class YahtzeeCounter {
             case "threeOfKind":{
                 return threeOfKind(dices);
             }
+            case "fourOfKind":{
+                return fourOfKind(dices);
+            }
         }
         return 0;
+    }
+
+    /**
+     * Count scores for different cases (four/three)
+     * @param dices
+     * @param needAmount
+     * @return count scores for different cases (four/three)
+     */
+    //в идеале сюда надо передавать вторым аргументом enum, у которого строго ограничен набор значений
+    //так же поможет избавиться от констант в коде
+
+    public static int needAmountOfKind(int[] dices, int needAmount) {
+        int maxAmountMatches = maxAmountMatches(dices);
+        if (maxAmountMatches >= needAmount) {
+            return sumOfDices(dices);
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * count scores for four Of Kind
+     * @param dices
+     * @return count scores for four Of Kind
+     */
+    //TODO: заменить константу на значение из класса Constants
+    public static int fourOfKind(int[] dices) {
+        return needAmountOfKind(dices, 4);
     }
 
     /**
@@ -28,13 +59,9 @@ public class YahtzeeCounter {
      * @param dices
      * @return count scores for three Of Kind
      */
+    //TODO: заменить константу на значение из класса Constants
     public static int threeOfKind(int[] dices) {
-        int maxAmountMatches = maxAmountMatches(dices);
-        if (maxAmountMatches >= 3) {
-            return sumOfDices(dices);
-        } else {
-            return 0;
-        }
+        return needAmountOfKind(dices, 3);
     }
 
     /**

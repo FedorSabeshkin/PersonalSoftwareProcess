@@ -12,16 +12,16 @@ public class FourOfKindTest {
     }
 
     @Test
-    public void Count_FourOfKind_16() {
+    public void Count_FourOfKind_21() {
         assertEquals(
-                16,
+                21,
                 YahtzeeCounter.count("fourOfKind", new int[]{4,4,4,5,4}));
     }
 
     @Test
-    public void Count_FourOfKind_32() {
+    public void Count_FourOfKind_20() {
         assertEquals(
-                32,
+                20,
                 YahtzeeCounter.count("fourOfKind", new int[]{4,4,4,4,4}));
     }
 }
