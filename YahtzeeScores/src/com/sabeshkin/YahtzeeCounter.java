@@ -1,5 +1,9 @@
 package com.sabeshkin;
+
 import com.sabeshkin.Constants;
+
+import java.util.Arrays;
+
 public class YahtzeeCounter {
 
     public static void main(String[] args) {
@@ -7,24 +11,44 @@ public class YahtzeeCounter {
     }
 
     public static int count(String combination, int[] dices) {
-        if(Constants.combination.containsKey(combination)){
+        if (Constants.combination.containsKey(combination)) {
             int amountOfMatch = countMatch(Constants.combination.get(combination), dices);
             return amountOfMatch * Constants.combination.get(combination);
+        }
+        switch (combination){
+            case "threeOfKind":{
+                return threeOfKind(dices);
+            }
         }
         return 0;
     }
 
     /**
+     * count scores for three Of Kind
+     * @param dices
+     * @return count scores for three Of Kind
+     */
+    public static int threeOfKind(int[] dices) {
+        int maxAmountMatches = maxAmountMatches(dices);
+        if (maxAmountMatches >= 3) {
+            return sumOfDices(dices);
+        } else {
+            return 0;
+        }
+    }
+
+    /**
      * Count max matches any dices in combination
+     *
      * @param dices combination
      * @return max matches amount any dices in combination
      */
-    public static int maxAmountMatches(int[] dices){
+    public static int maxAmountMatches(int[] dices) {
         int maxAmountOfMatch = 0;
         // переписать на stream
-        for(int i = 1; i<=Constants.maxDice; i++){
+        for (int i = 1; i <= Constants.maxDice; i++) {
             int amountOfMatch = countMatch(i, dices);
-            boolean isNextMax = amountOfMatch>=maxAmountOfMatch;
+            boolean isNextMax = amountOfMatch >= maxAmountOfMatch;
             maxAmountOfMatch = isNextMax ? amountOfMatch : maxAmountOfMatch;
         }
         return maxAmountOfMatch;
@@ -32,8 +56,9 @@ public class YahtzeeCounter {
 
     /**
      * Count values in array, which match with pattern
-     * @param pattern  number for match
-     * @param dices combination of dices
+     *
+     * @param pattern number for match
+     * @param dices   combination of dices
      * @return amount of match
      */
     public static int countMatch(int pattern, int[] dices) {
@@ -45,5 +70,15 @@ public class YahtzeeCounter {
             }
         }
         return amountOfMatch;
+    }
+
+    /**
+     * Sum of all dices
+     *
+     * @param dices
+     * @return sum of all dices
+     */
+    public static int sumOfDices(int[] dices) {
+        return Arrays.stream(dices).sum();
     }
 }

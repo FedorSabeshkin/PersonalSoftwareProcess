@@ -12,9 +12,9 @@ public class ThreeOfKindTest {
     }
 
     @Test
-    public void Count_ThreeOfKind_12() {
+    public void Count_ThreeOfKind_22() {
         assertEquals(
-                0,
+                22,
                 YahtzeeCounter.count("threeOfKind", new int[]{4,4,4,5,5}));
     }
 }
