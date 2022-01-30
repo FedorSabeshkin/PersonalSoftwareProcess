@@ -29,6 +29,12 @@ public class YahtzeeCounter {
             case "chance": {
                 return chance(dices);
             }
+            case "smallStraight": {
+                return smallStraight(dices);
+            }
+            case "largeStraight": {
+                return largeStraight(dices);
+            }
         }
         /**
          *
@@ -36,6 +42,41 @@ public class YahtzeeCounter {
          * и сузить входное название до enum, что бы точно попадало в один из switch
         */
         return 0;
+    }
+
+    public static int largeStraight(int[] dices) {
+        if (countBiggerThanPrev(dices)==5) {
+            return 40;
+        } else {
+            return 0;
+        }
+    }
+
+
+    public static int smallStraight(int[] dices) {
+        if (countBiggerThanPrev(dices)>=4) {
+            return 30;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * Count bigger than prev elements
+     * @param dices
+     * @return amount bigger than prev elements
+     */
+    public static int countBiggerThanPrev(int[] dices) {
+        int amountOfMore = 1;
+        // переписать на stream
+        for (int i = 1; i < dices.length; i++) {
+            boolean isBigger = dices[i] > dices[i-1];
+            boolean isOneDiff = (dices[i]-dices[i-1]) == 1;
+            if (isBigger && isOneDiff) {
+                amountOfMore++;
+            }
+        }
+        return amountOfMore;
     }
 
     /**
