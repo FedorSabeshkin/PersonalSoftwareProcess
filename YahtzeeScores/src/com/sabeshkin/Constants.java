@@ -15,4 +15,6 @@ public class Constants {
     }
 
     final public static int maxDice = 6;
+
+    final public static int fullHouseScores = 25;
 }
