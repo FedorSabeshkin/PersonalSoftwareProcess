@@ -2,6 +2,7 @@ package com.sabeshkin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Reversi {
 
@@ -22,15 +23,16 @@ public class Reversi {
                 {'.', '.', '.', '.', '.', '.', '.', '.'},
                 {'B'}
         };
-        enemy= defineEnemy(chars);
+        enemy = defineEnemy(chars);
     }
 
     /**
      * Define enemy from input data
+     *
      * @param chars
      * @return
      */
-    public static char defineEnemy(char[][] chars){
+    public static char defineEnemy(char[][] chars) {
         return chars[chars.length][0];
     }
 
@@ -46,15 +48,29 @@ public class Reversi {
         Cell[][] potentialMoves = new Cell[rowAmount + 1][columnAmount];
         for (int i = 0; i < rowAmount; i++) {
             for (int k = 0; k < columnAmount; k++) {
-                
-                /**
-                 * TODO: добавить проверку
-                 * на допустимые значения по всем направлениям
-                 * для данной точки
-                 * и если все ок, то ставить '0'
-                 * иначе оставлять '.'
-                 */
-                potentialMoves[i][k] = Cell.createPotentil(i, k);
+                Cell cell = grid[i][k];
+                if (cell.isEmpty()) {
+                    /**
+                     * TODO: добавить проверку
+                     * на допустимые значения по всем направлениям
+                     * для данной точки
+                     * и если все ок, то ставить '0'
+                     * иначе оставлять '.'
+                     */
+                    List<Cell> neighbours = generateNeighbours(grid[i][k], grid);
+                    List<Cell> enemies = neighbours.stream()
+                            .filter(
+                                    neighbour -> isEnemy(neighbour, enemy))
+                            .collect(Collectors.toList());
+                    List<String> directions = enemies.stream()
+                            .map(neighbour -> defineDirection(neighbour, cell))
+                            .collect(Collectors.toList());
+                    boolean isHaveFriend = directions.stream()
+                            .anyMatch(direction -> isFriendDirection(direction));
+                    potentialMoves[i][k] = isHaveFriend ? Cell.createPotentil(i, k) : cell;
+                } else {
+                    potentialMoves[i][k] = cell;
+                }
             }
         }
         return potentialMoves;
@@ -64,13 +80,10 @@ public class Reversi {
     /**
      * Проверка того, находится ли рядом
      * фишка противника
-     *
-     * @param row
-     * @param column
      * @return
      */
-    public static boolean isEnemy(Cell[][] grid, int row, int column, char enemy) {
-        return grid[row][column].getView() == enemy;
+    public static boolean isEnemy(Cell cell, char enemy) {
+        return cell.getView() == enemy;
     }
 
 
