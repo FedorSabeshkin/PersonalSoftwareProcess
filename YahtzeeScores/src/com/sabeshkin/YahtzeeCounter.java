@@ -40,12 +40,12 @@ public class YahtzeeCounter {
          *
          * TODO: попробовать убрать это return,
          * и сузить входное название до enum, что бы точно попадало в один из switch
-        */
+         */
         return 0;
     }
 
     public static int largeStraight(int[] dices) {
-        if (countBiggerThanPrev(dices)==5) {
+        if (countBiggerThanPrev(dices) == 5) {
             return 40;
         } else {
             return 0;
@@ -54,7 +54,7 @@ public class YahtzeeCounter {
 
 
     public static int smallStraight(int[] dices) {
-        if (countBiggerThanPrev(dices)>=4) {
+        if (countBiggerThanPrev(dices) >= 4) {
             return 30;
         } else {
             return 0;
@@ -63,6 +63,7 @@ public class YahtzeeCounter {
 
     /**
      * Count bigger than prev elements
+     *
      * @param dices
      * @return amount bigger than prev elements
      */
@@ -70,8 +71,8 @@ public class YahtzeeCounter {
         int amountOfMore = 1;
         // переписать на stream
         for (int i = 1; i < dices.length; i++) {
-            boolean isBigger = dices[i] > dices[i-1];
-            boolean isOneDiff = (dices[i]-dices[i-1]) == 1;
+            boolean isBigger = dices[i] > dices[i - 1];
+            boolean isOneDiff = (dices[i] - dices[i - 1]) == 1;
             if (isBigger && isOneDiff) {
                 amountOfMore++;
             }
@@ -81,6 +82,7 @@ public class YahtzeeCounter {
 
     /**
      * Count "chance"
+     *
      * @param dices
      * @return scores for "chance"
      */
@@ -172,6 +174,7 @@ public class YahtzeeCounter {
      */
     //TODO: заменить константу на значение из класса Constants
     public static int fourOfKind(int[] dices) {
+
         return needAmountOfKind(dices, 4);
     }
 
@@ -183,6 +186,7 @@ public class YahtzeeCounter {
      */
     //TODO: заменить константу на значение из класса Constants
     public static int threeOfKind(int[] dices) {
+
         return needAmountOfKind(dices, 3);
     }
 
@@ -195,6 +199,9 @@ public class YahtzeeCounter {
     public static int maxAmountMatches(int[] dices) {
         int maxAmountOfMatch = 0;
         // переписать на stream
+        // TODO: саму операцию пробегания по диапазону костей можно
+        // вынести в отдельный метод и передавать в него объект Function
+        // у которого буду вызывать метод .apply();
         for (int i = 1; i <= Constants.maxDice; i++) {
             int amountOfMatch = countMatch(i, dices);
             boolean isNextMax = amountOfMatch >= maxAmountOfMatch;
@@ -213,6 +220,9 @@ public class YahtzeeCounter {
     public static int countMatch(int pattern, int[] dices) {
         int amountOfMatch = 0;
         // переписать на stream
+        // TODO: саму операцию пробегания по выпавшим значениям  можно
+        // вынести в отдельный метод и передавать в него объект Function
+        // у которого буду вызывать метод .apply();
         for (int i = 0; i < dices.length; i++) {
             if (dices[i] == pattern) {
                 amountOfMatch++;
