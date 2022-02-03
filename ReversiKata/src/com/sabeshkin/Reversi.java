@@ -65,8 +65,7 @@ public class Reversi {
                     List<String> directions = enemies.stream()
                             .map(neighbour -> defineDirection(neighbour, cell))
                             .collect(Collectors.toList());
-                    boolean isHaveFriend = directions.stream()
-                            .anyMatch(direction -> isFriendDirection(direction));
+                    boolean isHaveFriend = false;
                     potentialMoves[i][k] = isHaveFriend ? Cell.createPotentil(i, k) : cell;
                 } else {
                     potentialMoves[i][k] = cell;
@@ -80,6 +79,7 @@ public class Reversi {
     /**
      * Проверка того, находится ли рядом
      * фишка противника
+     *
      * @return
      */
     public static boolean isEnemy(Cell cell, char enemy) {
@@ -199,5 +199,27 @@ public class Reversi {
         } else {
             return false;
         }
+    }
+
+    public static String defineDirection(Cell cell, Cell neighbourEnemy) {
+        int horizontal = cell.getRow() - neighbourEnemy.getRow();
+        int vertical = cell.getColumn() - neighbourEnemy.getColumn();
+        String horizontalDirection = "";
+
+        if (horizontal > 0) {
+            horizontalDirection = "Left";
+        }
+        if(horizontal < 0){
+            horizontalDirection = "Right";
+        }
+
+        String verticalDirection = "";
+        if (vertical > 0) {
+            verticalDirection = "Top";
+        }
+        if (vertical < 0) {
+            verticalDirection = "Bottom";
+        }
+        return horizontalDirection + verticalDirection;
     }
 }
