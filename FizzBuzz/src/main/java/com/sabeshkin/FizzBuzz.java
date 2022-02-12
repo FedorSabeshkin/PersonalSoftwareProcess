@@ -3,6 +3,9 @@ package com.sabeshkin;
 public class FizzBuzz {
     public static final int FIVE = 5;
     public static final int THREE = 3;
+    public static final String BUZZ = "Buzz";
+    public static final String FIZZ = "Fizz";
+    public static final String FIZZ_BUZZ = FIZZ + BUZZ;
 
     public static void main(String[] args) {
         // write your code here
@@ -40,6 +43,7 @@ public class FizzBuzz {
 
     /**
      * Check Entirely Divide dividend by divider
+     *
      * @param divider
      * @param dividend
      * @return is Entirely Divided dividend by divider
@@ -48,6 +52,22 @@ public class FizzBuzz {
         return dividend % divider == 0;
     }
 
-
-
+    /**
+     * Select string representation for number
+     * @param number
+     * @return string representation for number
+     */
+    public static String selectValue(int number) {
+        if (isThreeAndFiveDivided(number)) {
+            return FIZZ_BUZZ;
+        }
+        if (isThreeDivided(number)) {
+            return FIZZ;
+        }
+        if (isFiveDivided(number)) {
+            return BUZZ;
+        }else{
+            return number+"";
+        }
+    }
 }
