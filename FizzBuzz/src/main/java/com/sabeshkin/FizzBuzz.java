@@ -29,6 +29,16 @@ public class FizzBuzz {
     }
 
     /**
+     * Check divisibility by 3 and 5 same time
+     *
+     * @param dividend
+     * @return is three and five Divided
+     */
+    public static boolean isThreeAndFiveDivided(int dividend) {
+        return isThreeDivided(dividend) && isFiveDivided(dividend);
+    }
+
+    /**
      * Check Entirely Divide dividend by divider
      * @param divider
      * @param dividend
@@ -37,6 +47,7 @@ public class FizzBuzz {
     public static boolean isEntirelyDivided(int divider, int dividend) {
         return dividend % divider == 0;
     }
+
 
 
 }

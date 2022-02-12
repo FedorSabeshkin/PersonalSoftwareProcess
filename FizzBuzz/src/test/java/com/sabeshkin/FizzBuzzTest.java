@@ -43,6 +43,30 @@ class FizzBuzzTest {
     }
 
     @Test
+    @DisplayName("Divisibility 1 by 3 and 5")
+    void isThreeAndFiveDivided_1_By_3_And_5_False() {
+        assertEquals(false, FizzBuzz.isThreeAndFiveDivided(1));
+    }
+
+    @Test
+    @DisplayName("Divisibility 9 by 3 and 5")
+    void isThreeAndFiveDivided_9_By_3_And_5_False() {
+        assertEquals(false, FizzBuzz.isThreeAndFiveDivided(9));
+    }
+
+    @Test
+    @DisplayName("Divisibility 15 by 3 and 5")
+    void isThreeAndFiveDivided_15_By_3_And_5_False() {
+        assertEquals(true, FizzBuzz.isThreeAndFiveDivided(15));
+    }
+
+    @Test
+    @DisplayName("Divisibility 50 by 3 and 5")
+    void isThreeAndFiveDivided_50_By_3_And_5_False() {
+        assertEquals(false, FizzBuzz.isThreeAndFiveDivided(50));
+    }
+
+    @Test
     @DisplayName("Check Entirely Divide dividend by 3")
     void isEntirelyDivided_12_By_3_True() {
         assertEquals(true, FizzBuzz.isEntirelyDivided(FizzBuzz.THREE, 12));
