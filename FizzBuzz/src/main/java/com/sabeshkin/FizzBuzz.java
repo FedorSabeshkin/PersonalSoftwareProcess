@@ -1,5 +1,7 @@
 package com.sabeshkin;
 
+import java.util.stream.IntStream;
+
 public class FizzBuzz {
     public static final int FIVE = 5;
     public static final int THREE = 3;
@@ -8,7 +10,17 @@ public class FizzBuzz {
     public static final String FIZZ_BUZZ = FIZZ + BUZZ;
 
     public static void main(String[] args) {
-        // write your code here
+        IntStream.rangeClosed(1, 100)
+                .forEach(number->printRepresentation(number));
+    }
+
+    /**
+     * Print number representation to string
+     * @param number
+     */
+    public static void printRepresentation(int number) {
+        String representation = selectValue(number);
+        System.out.println(representation);
     }
 
     /**
@@ -54,6 +66,7 @@ public class FizzBuzz {
 
     /**
      * Select string representation for number
+     *
      * @param number
      * @return string representation for number
      */
@@ -66,8 +79,8 @@ public class FizzBuzz {
         }
         if (isFiveDivided(number)) {
             return BUZZ;
-        }else{
-            return number+"";
+        } else {
+            return number + "";
         }
     }
 }
